@@ -13,10 +13,10 @@ class Main extends ArraySort implements iMain {
             $response['bubble'] += $this->bubble($this->randomArrayCreator($size));
         }
         $response['bubble'] =$response['bubble']/50; 
-        // for ($i = 0; $i < 50; $i++) {
-        //     $response['quick'] += $this->quick($this->randomArrayCreator($size));
-        // }       
-        // echo '</br>'.($response['quick']/50).'</br>';
+        for ($i = 0; $i < 50; $i++) {
+             $response['quick'] += $this->quick($this->randomArrayCreator($size));
+         }       
+         echo '</br>'.($response['quick']/50).'</br>';
 
         for ($i = 0; $i < 50; $i++) {
             $response['radix'] += $this->radix($this->randomArrayCreator($size));
